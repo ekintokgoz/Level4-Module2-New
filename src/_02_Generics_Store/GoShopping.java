@@ -10,17 +10,21 @@ public class GoShopping {
 	//    Clothing and Toy are NonFood objects.
 	
 	public static void main(String[] args) {
-		// 2. Create a Cart object of type Candy
-		
-		// 3. Create another Cart object of type Cereal
-		
-		// 4. Add a few items to EACH cart
-		
-		
-		
-		
-		// 5. Call the showCart() method on EACH cart
-		
+//		// 2. Create a Cart object of type Candy
+//		Cart<Candy> candyCart = new Cart<Candy>(); 
+//		// 3. Create another Cart object of type Cereal
+//		Cart<Cereal> cerealCart = new Cart<Cereal>();
+//		// 4. Add a few items to EACH cart
+//		candyCart.add(new Candy());
+//		candyCart.add(new Candy());
+//		cerealCart.add(new Cereal());
+//		cerealCart.add(new Cereal());
+//		
+//		
+//		// 5. Call the showCart() method on EACH cart
+//		
+//		candyCart.showCart();
+//		cerealCart.showCart();
 		
 		// 6. Run the code
 		
