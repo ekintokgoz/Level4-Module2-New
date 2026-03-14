@@ -40,7 +40,7 @@ public class TernaryOperatorDemo {
 		 * 
 		 * 4. Surround the previous parts with a do while loop and continue
 		 * until the response says "FIRE!".
-		 */
+		 */ 
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("What season is it?");
