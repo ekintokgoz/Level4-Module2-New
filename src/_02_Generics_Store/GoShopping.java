@@ -32,9 +32,15 @@ public class GoShopping {
 		
 		// 8. Repeat steps 2-5 for a Clothing Cart and a Toy Cart
 		
+		Cart<Clothing> clothingCart = new Cart<Clothing>();
+		Cart<Toy> toyCart = new Cart<Toy>();
+		clothingCart.add(new Clothing());
+		clothingCart.add(new Clothing());
+		toyCart.add(new Toy());
+		toyCart.add(new Toy());
 		
-		
-		
+		clothingCart.showCart();
+		toyCart.showCart();
 		// Why are there errors?
 		
 		// 9. Modify the Cart class so that this code compiles
