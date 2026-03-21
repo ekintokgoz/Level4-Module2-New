@@ -43,17 +43,15 @@ public class TernaryOperatorDemo {
 		 */ 
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("What season is it?");
-		String season = scanner.nextLine();
-
+		String season = "";
 		do {
-			if(season.equals("duck season")) {
-				season = "FIRE!";
-			}else {
-				season = "rabbit season";
-			}
-			season = scanner.next();
-		}while(season.equals("FIRE!"));
+		System.out.println("What season is it?");
+		season = scanner.nextLine();
+		
+		
+		season = season.equals("duck season") ? "FIRE!" :  "rabbit season";
+		System.out.println(season);
+		} while(!season.equals("FIRE!"));
 		
 		
 		/*
