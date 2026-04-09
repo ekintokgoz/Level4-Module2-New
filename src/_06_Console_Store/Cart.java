@@ -40,18 +40,13 @@ public class Cart<T extends Food> {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		for (int i = 0; i < cart.length; i++) {
-			if(cart[i] instanceof NonFood) {
-				if (cart[i] != null) {
-					panel.add(((NonFood) cart[i]).getNonFood());
-				}
-			}else if(cart[i] instanceof Food){
+			if(cart[i] instanceof Food){
 				if(cart[i] != null) {
 					panel.add(((Food) cart[i]).getFood());
 				}
 			}
 		}
 		frame.pack();
-
 	}
 
 	public int length() {
