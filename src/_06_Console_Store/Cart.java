@@ -16,7 +16,7 @@ public class Cart<T extends Food> {
 	private T[] cart;
 
 	public Cart() {
-		cart = (T[]) new Object[5];
+		cart = (T[]) new Food[5];
 	}
 
 	// Adds an item to the cart

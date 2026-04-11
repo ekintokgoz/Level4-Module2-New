@@ -11,6 +11,7 @@ public abstract class Food {
 	String item;
 	
 	public abstract JLabel getFood();
+	public abstract int getPrice();
 	
 	@SuppressWarnings("rawtypes")
     public static ImageIcon loadImage(String fileName) {

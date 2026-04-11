@@ -39,6 +39,7 @@ public class ConsoleStore {
 	 */
 	Cart <Food> cart = new Cart<Food>(); 
 	Scanner scanner = new Scanner(System.in);
+	int stipend = 25;
 
 	public static void main(String[] args) {
 		ConsoleStore cs = new ConsoleStore();
@@ -46,8 +47,13 @@ public class ConsoleStore {
 	}
 
 	public void run() {
-		System.out.println("What do you want to do? (Add item, Remove item, View items, Check out)");
-		String userChoice = scanner.nextLine();
-		
+		String userChoice = "";
+		do {
+			System.out.println("What do you want to do? (Add item, Remove item, View items, Check out)");
+			userChoice = scanner.nextLine();
+			
+			
+			
+		} while (!userChoice.equals("Check out"));
 	}
 }

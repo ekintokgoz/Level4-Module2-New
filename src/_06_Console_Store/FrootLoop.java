@@ -11,4 +11,9 @@ public class FrootLoop extends Food{
 		// TODO Auto-generated method stub
 		return new JLabel(loadImage(this.item));
 	}
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 8;
+	}
 }
