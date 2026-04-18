@@ -30,6 +30,15 @@ public class Cart<T extends Food> {
 		JOptionPane.showMessageDialog(null,
 				"Your cart is full!\nNo more than 5 items");
 	}
+	
+	public String getContents() {
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < cart.length; i++) {
+			sb.append(((i+1) + ". " + cart[i].toString())+"\n");
+		}
+		
+		return sb.toString();
+	}
 
 	// Displays everything currently in the cart
 	public void showCart() {

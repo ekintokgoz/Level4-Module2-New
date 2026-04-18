@@ -16,4 +16,9 @@ public class Cheerios extends Food{
 		// TODO Auto-generated method stub
 		return 7;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Cheerios";
+	}
 }

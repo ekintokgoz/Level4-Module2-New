@@ -16,4 +16,9 @@ public class GummyWorm extends Food{
 		// TODO Auto-generated method stub
 		return 4;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Gummyworms";
+	}
 }

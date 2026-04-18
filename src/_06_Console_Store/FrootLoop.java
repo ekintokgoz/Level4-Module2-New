@@ -16,4 +16,9 @@ public class FrootLoop extends Food{
 		// TODO Auto-generated method stub
 		return 8;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Froot Loops";
+	}
 }

@@ -16,4 +16,9 @@ public class CandyCorn extends Food{
 		// TODO Auto-generated method stub
 		return 3;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Candy Corn";
+	}
 }

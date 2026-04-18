@@ -51,9 +51,53 @@ public class ConsoleStore {
 		do {
 			System.out.println("What do you want to do? (Add item, Remove item, View items, Check out)");
 			userChoice = scanner.nextLine();
-			
-			
-			
+			switch(userChoice) {
+			case "Add item":
+				System.out.println("What do you want to add to cart? (Candy Corn, Cheerios, Froot Loops, Gummyworms");
+				String itemChoice = scanner.nextLine();
+				addItem(itemChoice);
+				break;
+			case "Remove item":
+				remove();
+				break;
+			case "View items":
+
+				break;
+			default:
+				System.out.println("That is not an option. Try again.");
+				break;
+			}
+
+
+
 		} while (!userChoice.equals("Check out"));
+	}
+
+	public void addItem(String item) {
+		switch(item) {
+		case "Candy Corn":
+			cart.add(new CandyCorn());
+			System.out.println("Successfully added Candy Corn to cart");
+			break;
+		case "Cheerios":
+			cart.add(new Cheerios());
+			System.out.println("Successfully added Cheerios to cart");
+			break;
+		case "Froot Loops":
+			cart.add(new FrootLoop());
+			System.out.println("Successfully added Froot Loops to cart");
+			break;
+		case "Gummyworms":
+			cart.add(new GummyWorm());
+			System.out.println("Successfully added Gummyworms to cart");
+			break;
+		default:
+			System.out.println("Not an available item.");
+			break;
+		}	
+	}
+	
+	public void remove() {
+		System.out.println(cart.getContents());
 	}
 }
