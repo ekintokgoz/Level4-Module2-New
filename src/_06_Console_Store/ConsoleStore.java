@@ -58,10 +58,13 @@ public class ConsoleStore {
 				addItem(itemChoice);
 				break;
 			case "Remove item":
-				remove();
+				showItems();
+				System.out.println("Which number do you want to remove from cart?");
+				int numberChoice = Integer.parseInt(scanner.nextLine());
+				cart.remove(numberChoice-1);
 				break;
 			case "View items":
-
+				showItems();
 				break;
 			default:
 				System.out.println("That is not an option. Try again.");
@@ -97,7 +100,8 @@ public class ConsoleStore {
 		}	
 	}
 	
-	public void remove() {
+	public void showItems() {
 		System.out.println(cart.getContents());
+
 	}
 }
