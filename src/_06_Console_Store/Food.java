@@ -5,7 +5,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
-import _02_Generics_Store.Cart;
+
 
 public abstract class Food {
 	String item;

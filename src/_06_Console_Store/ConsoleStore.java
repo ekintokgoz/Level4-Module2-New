@@ -48,7 +48,7 @@ public class ConsoleStore {
 
 	public void run() {
 		String userChoice = "";
-		do {
+		LOOP: do {
 			System.out.println("What do you want to do? (Add item, Remove item, View items, Check out)");
 			userChoice = scanner.nextLine();
 			switch(userChoice) {
@@ -66,14 +66,23 @@ public class ConsoleStore {
 			case "View items":
 				showItems();
 				break;
+			case "Check out":
+				System.out.println("Proceeding to checkout...");
+				showItems();
+				if(cart.getPrices() > stipend) {
+					System.out.println("You do not have enough money to buy these items. You are spending $" + cart.getPrices() + ".00, please remove $" + (cart.getPrices() - stipend) + ".00 in order to check out.");
+					break;
+				}else {
+					System.out.println("Scanning items for checkout..");
+					cart.printReceipt();
+					cart.showCart();				
+					break LOOP;
+				}
 			default:
 				System.out.println("That is not an option. Try again.");
 				break;
 			}
-
-
-
-		} while (!userChoice.equals("Check out"));
+		} while (true);
 	}
 
 	public void addItem(String item) {
@@ -99,7 +108,7 @@ public class ConsoleStore {
 			break;
 		}	
 	}
-	
+
 	public void showItems() {
 		System.out.println(cart.getContents());
 

@@ -37,6 +37,24 @@ public class Cart<T extends Food> {
 			return ("Cart is empty");
 		}
 	}
+	
+	public int getPrices() {
+		int prices = 0;
+		for(int i = 0; i < cart.size(); i++) {
+			prices += cart.get(i).getPrice();
+		}
+		return prices;
+	}
+	
+	public void printReceipt() {
+		String receipt = "";
+		for(int i = 0; i < cart.size(); i++) {
+			receipt += (cart.get(i).toString() + ":   $" + cart.get(i).getPrice() + ".00  \n");
+		}
+		
+		receipt += ("Total: $" + getPrices() + ".00");
+		System.out.println(receipt);
+	}
 
 	// Displays everything currently in the cart
 	public void showCart() {
